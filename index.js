@@ -33,4 +33,13 @@ function main2() {
 }
 console.log(main2())
 
+//4 
+//Returns the total value of the tree (O(n))
+// function tree(t){
+//     if(!t){
+//         return 0;
+//     }
+//     return tree(t.left) + t.value + tree(t.right)
+// }
+
 
