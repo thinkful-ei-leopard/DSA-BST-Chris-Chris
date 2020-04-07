@@ -42,4 +42,13 @@ console.log(main2())
 //     return tree(t.left) + t.value + tree(t.right)
 // }
 
+//5
+function findHeight(BST) {
+  let heightCount = 0
+  let currentLeftNode = BST.key
+  let currentRightNode = BST.key
 
+  while(currentLeftNode !== null || currentRightNode !== null) {
+    
+  }
+}
