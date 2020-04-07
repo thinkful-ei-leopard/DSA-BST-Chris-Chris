@@ -58,6 +58,21 @@ function findHeight(BST) {
 let bst = main();
 let tree = new BinarySearchTree()
 
-// console.log(bst)
+// console.log(findHeight(bst))
 
-console.log(findHeight(bst))
+//6
+function isItBST(treeNode) {
+  if (treeNode.left === null && treeNode.right === null) {
+    return true;
+  } else if (treeNode.left === null) {
+    return isItBST(treeNode.right);
+  } else if(treeNode.right === null) {
+    return isItBST(treeNode.left);
+  } else if (treeNode.left.key > treeNode.key || treeNode.right.key < treeNode.key) {
+    return false;
+  }  
+
+  return isItBST(treeNode.left) === isItBST(treeNode.right)
+}
+
+console.log(isItBST(bst))
